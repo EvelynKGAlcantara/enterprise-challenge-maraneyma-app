@@ -1,6 +1,6 @@
-# 👋 Bem-vindo ao seu aplicativo Maraneyma
+# 👋 Bem-vindo ao aplicativo Maraneyma
 
-Este é um projeto [Expo](https://expo.dev) criado com [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Este é um projeto [Expo](https://expo.dev) criado com [`npx create-expo-app@latest`](https://docs.expo.dev/get-started/create-a-project/).
 
 ## Como iniciar o aplicativo
 
@@ -13,7 +13,7 @@ Este é um projeto [Expo](https://expo.dev) criado com [`create-expo-app`](https
 2. Inicie a aplicação
 
    ```bash
-   npx expo start
+   npm start
    ```
 
 Na saída do terminal, você encontrará opções para abrir o app em:
