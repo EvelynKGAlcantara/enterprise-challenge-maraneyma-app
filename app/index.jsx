@@ -5,13 +5,17 @@ export default function Index() {
     <View style={styles.container}>
       <Image style={styles.image} source={require("./logo-maraneyma.png")} />
       <Image source={require("./pular-corda.png")} />
-      <Text style={styles.title}>Seu guia de</Text>
-      <Text style={styles.titleBold}>esportes escolares</Text>
-      <Text style={styles.text}>
-        <Text style={styles.textBoldPurple}>"Maraneyma”</Text> significa
-        <Text style={styles.textBoldBlack}> "saúde"</Text> {"\n"} em{" "}
-        <Text style={styles.textBoldBlack}>Tupi-Guarani.</Text>
-      </Text>
+      <View>
+        <Text style={styles.title}>Seu guia de</Text>
+        <Text style={styles.titleBold}>esportes escolares</Text>
+      </View>
+      <View>
+        <Text style={styles.text}>
+          <Text style={styles.textBoldPurple}>"Maraneyma”</Text> significa
+          <Text style={styles.textBoldBlack}> "saúde"</Text> {"\n"} em{" "}
+          <Text style={styles.textBoldBlack}>Tupi-Guarani.</Text>
+        </Text>
+      </View>
     </View>
   );
 }
@@ -22,9 +26,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#D3D3D3",
+    gap: 24,
   },
   title: {
-    marginTop: 40,
+    textAlign: "center",
     fontSize: 30,
     color: "#000000",
   },
@@ -34,7 +39,6 @@ const styles = StyleSheet.create({
   },
   text: {
     textAlign: "center",
-    marginTop: 20,
     color: "#000000",
     fontSize: 16,
   },
@@ -46,7 +50,5 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#000000",
   },
-  image: {
-    marginBottom: 30,
-  },
+  image: {},
 });
