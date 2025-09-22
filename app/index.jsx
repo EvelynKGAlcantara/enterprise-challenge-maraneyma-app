@@ -1,10 +1,27 @@
 import { Image, StyleSheet, Text, View } from "react-native";
+import { useEffect } from "react";
+import { useNavigation } from "@react-navigation/native";
+import { ActionButton } from "../components/ActionButton";
+import { useRouter } from "expo-router";
 
-export default function Index() {
+export default function SplashScreen() {
+  const router = useRouter();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      router.replace("/onBoarding"); // ✅ navega para app/onBoarding.jsx
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, [router]);
+
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={require("./logo-maraneyma.png")} />
-      <Image source={require("./pular-corda.png")} />
+      <Image
+        style={styles.image}
+        source={require("../assets/images/logo-maraneyma.png")}
+      />
+      <Image source={require("../assets/images/pular-corda.png")} />
       <View>
         <Text style={styles.title}>Seu guia de</Text>
         <Text style={styles.titleBold}>esportes escolares</Text>
@@ -25,7 +42,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#D3D3D3",
+    backgroundColor: "#F2F2F2",
     gap: 24,
   },
   title: {
@@ -40,7 +57,7 @@ const styles = StyleSheet.create({
   text: {
     textAlign: "center",
     color: "#000000",
-    fontSize: 16,
+    fontSize: 20,
   },
   textBoldPurple: {
     fontWeight: "bold",
@@ -51,4 +68,7 @@ const styles = StyleSheet.create({
     color: "#000000",
   },
   image: {},
+  tabs: {
+    flexDirection: "row",
+  },
 });
