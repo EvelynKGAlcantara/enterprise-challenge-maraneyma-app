@@ -4,12 +4,12 @@ import { useNavigation } from "@react-navigation/native";
 import { ActionButton } from "../components/ActionButton";
 import { useRouter } from "expo-router";
 
-export default function SplashScreen() {
+export default function Index() {
   const router = useRouter();
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      router.replace("/onBoarding"); // ✅ navega para app/onBoarding.jsx
+      router.replace("/onBoarding");
     }, 4000);
 
     return () => clearTimeout(timer);

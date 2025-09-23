@@ -62,12 +62,12 @@ export default function OnBoarding() {
     if (currentIndex < slides.length - 1) {
       flatListRef.current.scrollToIndex({ index: currentIndex + 1 });
     } else {
-      router.replace("/cadastro");
+      router.replace("/signupScreen");
     }
   };
 
   const handleSkip = () => {
-    router.replace("/cadastro");
+    router.replace("/signupScreen");
   };
 
   return (
