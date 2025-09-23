@@ -9,11 +9,14 @@ import {
 } from "react-native";
 import { useRouter } from "expo-router";
 import { useState } from "react";
+import AntDesign from "@expo/vector-icons/AntDesign";
+import Ionicons from "@expo/vector-icons/Ionicons";
 
 export default function Login() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = () => {
     router.push("homeScreen");
@@ -46,7 +49,7 @@ export default function Login() {
       </View>
 
       <View style={styles.form}>
-        <Text style={styles.formTitle}>
+        <Text style={styles.headerSubtitle}>
           Insira seu usuário e senha pra acessar
         </Text>
 
@@ -64,13 +67,24 @@ export default function Login() {
 
         <View style={styles.inputGroup}>
           <Text style={styles.inputLabel}>Senha de acesso</Text>
-          <TextInput
-            style={styles.input}
-            placeholder="Senha"
-            value={password}
-            onChangeText={setPassword}
-            secureTextEntry
-          />
+
+          <View style={styles.inputContainer}>
+            <TextInput
+              style={styles.inputPassword}
+              placeholder="Senha"
+              secureTextEntry={!showPassword}
+              value={password}
+              onChangeText={setPassword}
+            />
+
+            <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
+              <AntDesign
+                name={showPassword ? "eye" : "eye-invisible"}
+                size={20}
+                color="#00000045"
+              />
+            </TouchableOpacity>
+          </View>
         </View>
         <Pressable>
           <Text style={styles.textPassword}>Esqueceu sua senha?</Text>
@@ -98,48 +112,41 @@ const styles = StyleSheet.create({
     marginBottom: 32,
   },
   headerTitle: {
-    fontSize: 24,
+    fontSize: 30,
     fontWeight: "bold",
-    color: "#000000",
-    marginBottom: 8,
+    color: "#515151",
+    marginBottom: 24,
   },
   headerSubtitle: {
     fontSize: 16,
-    color: "#666666",
+    color: "#7B7B7B",
     lineHeight: 22,
+    marginBottom: 24,
+    marginTop: 16,
   },
   googleButton: {
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: "#FFFFFF",
     borderRadius: 50,
-    paddingVertical: 24,
+    paddingVertical: 12,
     paddingHorizontal: 24,
-    marginBottom: 24,
+    marginBottom: 40,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 3,
   },
-  googleIcon: {
-    width: 24,
-    height: 24,
-    borderRadius: 12,
-    backgroundColor: "#4285F4",
-    justifyContent: "center",
-    alignItems: "center",
-    marginRight: 12,
-  },
-  googleIconText: {
-    color: "#FFFFFF",
-    fontWeight: "bold",
-    fontSize: 14,
-  },
+
   googleButtonText: {
     fontSize: 16,
     color: "#1890FF",
     fontWeight: "bold",
+    marginLeft: 20,
+  },
+  googleIconImage: {
+    marginLeft: 18,
   },
   divider: {
     flexDirection: "row",
@@ -157,7 +164,7 @@ const styles = StyleSheet.create({
     color: "#666666",
   },
   form: {
-    marginBottom: 32,
+    marginBottom: 166,
   },
   formTitle: {
     fontSize: 16,
@@ -181,6 +188,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "#E0E0E0",
   },
+
   inputHelper: {
     fontSize: 12,
     color: "#666666",
@@ -204,6 +212,33 @@ const styles = StyleSheet.create({
   textPassword: {
     color: "#EB2F96",
     fontWeight: "bold",
+    fontSize: 16,
+    textDecorationLine: "underline",
+  },
+
+  wrapper: {
+    marginHorizontal: 16,
+    marginVertical: 10,
+  },
+  label: {
+    marginBottom: 6,
+    fontSize: 14,
+    color: "#333",
+  },
+  inputContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#FFFFFF",
+    borderRadius: 8,
+    paddingHorizontal: 16,
+    paddingVertical: 2,
+    fontSize: 16,
+    borderWidth: 1,
+    borderColor: "#E0E0E0",
+  },
+  inputPassword: {
+    flex: 1,
+    paddingVertical: 10,
     fontSize: 16,
   },
 });
