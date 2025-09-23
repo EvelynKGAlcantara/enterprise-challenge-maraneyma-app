@@ -1,12 +1,13 @@
 import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
+import { Text, TouchableOpacity } from "react-native";
 
 export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarShowLabel: false,
+        tabBarShowLabel: true,
         tabBarStyle: {
           backgroundColor: "#fff",
           borderTopWidth: 1,
@@ -24,14 +25,13 @@ export default function TabLayout() {
         name="homeScreen"
         options={{
           title: "homeScreen",
-
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="home-outline" size={size} color={color} />
           ),
         }}
       />
       <Tabs.Screen
-        name="tutorials/tutorials"
+        name="tutorials"
         options={{
           title: "Tutoriais",
           tabBarIcon: ({ color, size }) => (
@@ -52,6 +52,7 @@ export default function TabLayout() {
         name="ranking"
         options={{
           title: "Ranking",
+
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="podium-outline" size={size} color={color} />
           ),

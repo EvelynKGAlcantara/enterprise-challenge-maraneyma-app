@@ -1,8 +1,8 @@
 // app/tutorials/index.js
 import React, { useState } from "react";
 import { View, StyleSheet, Pressable, Text } from "react-native";
-import GroupActivities from "./groupActivities";
-import IndividualActivities from "./individualActivities";
+import GroupActivities from "../tutorials/groupActivities";
+import IndividualActivities from "../tutorials/individualActivities";
 
 export default function Tutorials() {
   const [tab, setTab] = useState("group");
@@ -11,7 +11,6 @@ export default function Tutorials() {
     <View style={styles.container}>
       <Text style={styles.header}>Tutoriais</Text>
 
-      {/* Tabs */}
       <View style={styles.tabs}>
         <Pressable
           style={[styles.tab, tab === "group" && styles.activeTab]}
@@ -43,29 +42,35 @@ export default function Tutorials() {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: "#fff" },
   header: {
-    fontSize: 22,
-    fontWeight: "bold",
     textAlign: "center",
     marginTop: 50,
-    marginBottom: 16,
+    fontSize: 30,
+    fontWeight: "bold",
+    color: "#515151",
+    marginBottom: 24,
   },
   tabs: {
     flexDirection: "row",
     justifyContent: "center",
-    borderBottomWidth: 1,
-    borderColor: "#ddd",
+    borderStyle: "solid",
+    borderColor: "#F0F0F0",
+    gap: 5,
   },
   tab: {
     paddingVertical: 10,
     paddingHorizontal: 20,
+    borderWidth: 1,
+    borderColor: "#F0F0F0",
+    backgroundColor: "#f8f8f8ff",
   },
   tabText: {
     fontSize: 14,
-    color: "#555",
+    color: "#00000085",
   },
   activeTab: {
-    borderBottomWidth: 2,
-    borderColor: "#ff007f",
+    borderBottomWidth: 1,
+    borderBottomColor: "#ff007f",
+    backgroundColor: "#ffffff",
   },
   activeText: {
     color: "#ff007f",

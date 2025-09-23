@@ -14,14 +14,11 @@ export default function SportCard({ title, description, onPress }) {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: "#fff",
-    padding: 16,
+    backgroundColor: "#f9f9f9ff",
+    paddingHorizontal: 16,
+    paddingVertical: 24,
     borderRadius: 12,
     marginBottom: 16,
-    shadowColor: "#000",
-    shadowOpacity: 0.05,
-    shadowRadius: 4,
-    elevation: 2,
   },
   title: {
     fontSize: 16,

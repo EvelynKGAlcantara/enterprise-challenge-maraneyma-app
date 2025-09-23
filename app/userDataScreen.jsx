@@ -4,20 +4,27 @@ import {
   View,
   TextInput,
   TouchableOpacity,
+  Pressable,
 } from "react-native";
 import { useState } from "react";
 import { useRouter } from "expo-router";
+import { RadioButton } from "../components/Radio/Radio";
 
 export default function UserDataScreen() {
   const router = useRouter();
-  const [name, setName] = useState("Carl Sagan");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [birthYear, setBirthYear] = useState("0000");
-  const [profession, setProfession] = useState("Professor");
+  const [birthYear, setBirthYear] = useState("");
+  const [selectedOption, setSelectedOption] = useState(null);
 
   const handleContinue = () => {
-    router.push("/successScreen");
+    router.push("/registrationSuccessScreen");
   };
+
+  const perfil = [
+    { label: "Professor", value: "1" },
+    { label: "Estudante ou Praticante Independente", value: "2" },
+  ];
 
   return (
     <View style={styles.container}>
@@ -52,7 +59,7 @@ export default function UserDataScreen() {
         <View style={styles.inputGroup}>
           <Text style={styles.inputLabel}>Ano de nascimento</Text>
           <TextInput
-            style={styles.input}
+            style={styles.inputYear}
             value={birthYear}
             onChangeText={setBirthYear}
             placeholder="0000"
@@ -62,22 +69,20 @@ export default function UserDataScreen() {
         </View>
 
         <View style={styles.inputGroup}>
-          <Text style={styles.inputLabel}>Qual o seu perfil</Text>
-          <TextInput
-            style={styles.input}
-            value={profession}
-            onChangeText={setProfession}
-            placeholder="Professor"
+          <Text style={styles.inputLabel}>Qual o seu perfil?</Text>
+          <RadioButton
+            options={perfil}
+            selected={selectedOption}
+            onSelect={setSelectedOption}
           />
-          <Text style={styles.inputHelper}>
-            Estudante ou praticante independente
-          </Text>
         </View>
       </View>
 
-      <TouchableOpacity style={styles.continueButton} onPress={handleContinue}>
-        <Text style={styles.continueButtonText}>Concluir</Text>
-      </TouchableOpacity>
+      <View style={styles.buttons}>
+        <Pressable style={styles.primaryButton} onPress={handleContinue}>
+          <Text style={styles.primaryText}>Concluir</Text>
+        </Pressable>
+      </View>
     </View>
   );
 }
@@ -94,14 +99,14 @@ const styles = StyleSheet.create({
     marginBottom: 32,
   },
   headerTitle: {
-    fontSize: 24,
+    fontSize: 30,
     fontWeight: "bold",
-    color: "#000000",
-    marginBottom: 8,
+    color: "#515151",
+    marginBottom: 16,
   },
   headerSubtitle: {
     fontSize: 16,
-    color: "#666666",
+    color: "#7B7B7B",
     lineHeight: 22,
   },
   googleButton: {
@@ -172,6 +177,16 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     paddingHorizontal: 16,
     paddingVertical: 12,
+    fontSize: 16,
+    borderWidth: 1,
+    borderColor: "#E0E0E0",
+  },
+  inputYear: {
+    backgroundColor: "#FFFFFF",
+    borderRadius: 8,
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    width: 150,
     fontSize: 16,
     borderWidth: 1,
     borderColor: "#E0E0E0",
@@ -253,5 +268,21 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontSize: 16,
     fontWeight: "bold",
+  },
+
+  buttons: {
+    gap: 10,
+    marginTop: 140,
+  },
+  primaryButton: {
+    backgroundColor: "#EB2F96",
+    paddingVertical: 12,
+    borderRadius: 8,
+    alignItems: "center",
+  },
+  primaryText: {
+    color: "#fff",
+    fontWeight: "bold",
+    fontSize: 16,
   },
 });

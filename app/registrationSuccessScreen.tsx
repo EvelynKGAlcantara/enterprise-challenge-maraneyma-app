@@ -1,29 +1,40 @@
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  Pressable,
+} from "react-native";
 import { useRouter } from "expo-router";
+import LottieView from "lottie-react-native";
 
 export default function SuccessScreen() {
   const router = useRouter();
 
   const handleAdvance = () => {
-    // Navegar para próxima tela ou home
-    // router.replace("cadastro");
+    router.replace("/(tabs)/homeScreen");
   };
 
   return (
     <View style={styles.container}>
       <View style={styles.successContainer}>
         <View style={styles.checkmarkContainer}>
-          <View style={styles.checkmark}>
-            <Text style={styles.checkmarkText}>✓</Text>
-          </View>
+          <LottieView
+            source={require("../assets/images/animations/success_2.json")}
+            autoPlay
+            loop={false}
+            style={{ width: 200, height: 200 }}
+          />
         </View>
 
         <Text style={styles.successTitle}>Conta criada com sucesso!</Text>
       </View>
 
-      <TouchableOpacity style={styles.advanceButton} onPress={handleAdvance}>
-        <Text style={styles.advanceButtonText}>Avançar</Text>
-      </TouchableOpacity>
+      <View style={styles.buttons}>
+        <Pressable style={styles.primaryButton} onPress={handleAdvance}>
+          <Text style={styles.primaryText}>Avançar</Text>
+        </Pressable>
+      </View>
     </View>
   );
 }
@@ -185,9 +196,9 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   successTitle: {
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: "bold",
-    color: "#000000",
+    color: "#626262",
     textAlign: "center",
   },
   advanceButton: {
@@ -200,5 +211,20 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontSize: 16,
     fontWeight: "bold",
+  },
+  buttons: {
+    gap: 10,
+    marginTop: 140,
+  },
+  primaryButton: {
+    backgroundColor: "#EB2F96",
+    paddingVertical: 12,
+    borderRadius: 8,
+    alignItems: "center",
+  },
+  primaryText: {
+    color: "#fff",
+    fontWeight: "bold",
+    fontSize: 16,
   },
 });
