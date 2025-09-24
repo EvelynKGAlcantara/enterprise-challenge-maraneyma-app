@@ -66,11 +66,12 @@ export default function GroupActivities() {
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 16 },
   title: {
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: "bold",
     textAlign: "center",
     marginBottom: 12,
-    color: "#ff007f",
+    color: "#EB2F96",
+    fontFamily: "SofiaSans_400Regular",
   },
   image: {
     width: "100%",

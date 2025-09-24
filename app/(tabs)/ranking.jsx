@@ -21,22 +21,23 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     paddingHorizontal: 20,
+    backgroundColor: "#ffffff",
   },
   mainText: {
     fontSize: 24,
     textAlign: "center",
     color: "#666",
     fontWeight: "500",
-    marginTop: 20,
+    marginTop: 10,
   },
   subText: {
     fontSize: 16,
     textAlign: "center",
     color: "#999",
-    marginTop: 8,
+    marginTop: 4,
   },
   image: {
-    height: "40%",
+    height: "30%",
     resizeMode: "contain",
   },
 });

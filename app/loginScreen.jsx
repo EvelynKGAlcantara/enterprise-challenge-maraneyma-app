@@ -103,13 +103,14 @@ export default function Login() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F2F2F2",
+    backgroundColor: "#fbfbfbff",
     paddingHorizontal: 24,
     paddingTop: 60,
     paddingBottom: 40,
   },
   header: {
     marginBottom: 32,
+    fontFamily: "SofiaSans_400Regular",
   },
   headerTitle: {
     fontSize: 30,
@@ -118,12 +119,14 @@ const styles = StyleSheet.create({
     marginBottom: 24,
   },
   headerSubtitle: {
-    fontSize: 16,
+    fontSize: 18,
     color: "#7B7B7B",
     lineHeight: 22,
     marginBottom: 24,
     marginTop: 16,
+    fontFamily: "SofiaSans_400Regular",
   },
+
   googleButton: {
     flexDirection: "row",
     alignItems: "center",
@@ -140,9 +143,9 @@ const styles = StyleSheet.create({
   },
 
   googleButtonText: {
-    fontSize: 16,
+    fontSize: 17,
     color: "#1890FF",
-    fontWeight: "bold",
+    fontWeight: "700",
     marginLeft: 20,
   },
   googleIconImage: {
@@ -160,8 +163,9 @@ const styles = StyleSheet.create({
   },
   dividerText: {
     marginHorizontal: 16,
-    fontSize: 14,
-    color: "#666666",
+    fontSize: 16,
+    color: "#000000",
+    fontWeight: "500",
   },
   form: {
     marginBottom: 166,
@@ -181,7 +185,7 @@ const styles = StyleSheet.create({
   },
   input: {
     backgroundColor: "#FFFFFF",
-    borderRadius: 8,
+    borderRadius: 4,
     paddingHorizontal: 16,
     paddingVertical: 12,
     fontSize: 16,
@@ -201,18 +205,18 @@ const styles = StyleSheet.create({
   primaryButton: {
     backgroundColor: "#EB2F96",
     paddingVertical: 12,
-    borderRadius: 8,
+    borderRadius: 4,
     alignItems: "center",
   },
   primaryText: {
     color: "#fff",
-    fontWeight: "bold",
+
     fontSize: 16,
   },
   textPassword: {
     color: "#EB2F96",
     fontWeight: "bold",
-    fontSize: 16,
+    fontSize: 18,
     textDecorationLine: "underline",
   },
 
@@ -229,7 +233,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: "#FFFFFF",
-    borderRadius: 8,
+    borderRadius: 4,
     paddingHorizontal: 16,
     paddingVertical: 2,
     fontSize: 16,

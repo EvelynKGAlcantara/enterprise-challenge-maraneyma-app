@@ -43,7 +43,7 @@ export default function SuccessScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F2F2F2",
+    backgroundColor: "#efefefff",
     paddingHorizontal: 24,
     paddingTop: 60,
     paddingBottom: 40,
@@ -168,7 +168,7 @@ const styles = StyleSheet.create({
     color: "#666666",
     textDecorationLine: "underline",
   },
-  // Success Screen Styles
+
   successContainer: {
     flex: 1,
     justifyContent: "center",
@@ -200,6 +200,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#626262",
     textAlign: "center",
+    fontFamily: "SofiaSans_400Regular",
   },
   advanceButton: {
     backgroundColor: "#EB2F96",
@@ -215,16 +216,17 @@ const styles = StyleSheet.create({
   buttons: {
     gap: 10,
     marginTop: 140,
+    marginBottom: 20,
   },
   primaryButton: {
     backgroundColor: "#EB2F96",
     paddingVertical: 12,
-    borderRadius: 8,
+    borderRadius: 4,
     alignItems: "center",
   },
   primaryText: {
     color: "#fff",
-    fontWeight: "bold",
+
     fontSize: 16,
   },
 });

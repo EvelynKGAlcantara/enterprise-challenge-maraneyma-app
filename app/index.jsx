@@ -1,8 +1,9 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, View, Dimensions } from "react-native";
 import { useEffect } from "react";
-import { useNavigation } from "@react-navigation/native";
-import { ActionButton } from "../components/ActionButton";
+
 import { useRouter } from "expo-router";
+import { LinearGradient } from "expo-linear-gradient";
+const { width } = Dimensions.get("window");
 
 export default function Index() {
   const router = useRouter();
@@ -16,12 +17,26 @@ export default function Index() {
   }, [router]);
 
   return (
-    <View style={styles.container}>
-      <Image
-        style={styles.image}
-        source={require("../assets/images/logo-maraneyma.png")}
-      />
-      <Image source={require("../assets/images/pular-corda.png")} />
+    <LinearGradient
+      colors={["#F0F4F3", "#FCFDFD"]}
+      start={{ x: 0.5, y: 0 }}
+      end={{ x: 0.5, y: 1 }}
+      style={styles.container}
+    >
+      <View>
+        <Image
+          source={require("../assets/images/logo-maraneyma.png")}
+          style={styles.logo}
+        />
+      </View>
+
+      <View style={styles.slide}>
+        <Image
+          style={styles.Image}
+          source={require("../assets/images/pular-corda.png")}
+        />
+      </View>
+
       <View>
         <Text style={styles.title}>Seu guia de</Text>
         <Text style={styles.titleBold}>esportes escolares</Text>
@@ -33,23 +48,22 @@ export default function Index() {
           <Text style={styles.textBoldBlack}>Tupi-Guarani.</Text>
         </Text>
       </View>
-    </View>
+    </LinearGradient>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
     backgroundColor: "#F2F2F2",
-    gap: 24,
+    alignItems: "center",
   },
   title: {
     textAlign: "center",
     fontSize: 30,
     color: "#000000",
     fontFamily: "SofiaSans_400Regular",
+    marginTop: 70,
   },
   titleBold: {
     fontWeight: "bold",
@@ -59,8 +73,10 @@ const styles = StyleSheet.create({
   text: {
     textAlign: "center",
     color: "#000000",
-    fontSize: 20,
+    fontSize: 16,
     fontFamily: "SofiaSans_400Regular",
+    marginTop: 8,
+    marginBottom: 10,
   },
   textBoldPurple: {
     fontWeight: "bold",
@@ -72,8 +88,23 @@ const styles = StyleSheet.create({
     color: "#000000",
     fontFamily: "SofiaSans_400Regular",
   },
-  image: {},
+
   tabs: {
     flexDirection: "row",
+  },
+
+  logo: {
+    resizeMode: "contain",
+    marginBottom: 70,
+    marginTop: 110,
+  },
+  slide: {
+    alignItems: "center",
+  },
+  Image: {
+    resizeMode: "contain",
+
+    width: 400,
+    height: 270,
   },
 });

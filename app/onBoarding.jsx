@@ -9,6 +9,7 @@ import {
   Dimensions,
 } from "react-native";
 import { useRouter } from "expo-router";
+import { LinearGradient } from "expo-linear-gradient";
 
 const { width } = Dimensions.get("window");
 
@@ -71,7 +72,12 @@ export default function OnBoarding() {
   };
 
   return (
-    <View style={styles.container}>
+    <LinearGradient
+      colors={["#F0F4F3", "#FCFDFD"]}
+      start={{ x: 0.5, y: 0 }}
+      end={{ x: 0.5, y: 1 }}
+      style={styles.container}
+    >
       <Image
         source={require("../assets/images/logo-maraneyma.png")}
         style={styles.logo}
@@ -122,7 +128,7 @@ export default function OnBoarding() {
           </Pressable>
         )}
       </View>
-    </View>
+    </LinearGradient>
   );
 }
 
@@ -136,7 +142,7 @@ const styles = StyleSheet.create({
   logo: {
     height: 100,
     resizeMode: "contain",
-    marginTop: 90,
+    marginTop: 110,
     marginBottom: 70,
   },
   slide: {
@@ -153,7 +159,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 16,
     textAlign: "center",
-    color: "#000",
+    color: "#000000",
     fontFamily: "SofiaSans_400Regular",
   },
   boldText: {
@@ -161,9 +167,9 @@ const styles = StyleSheet.create({
     fontFamily: "SofiaSans_400Regular",
   },
   counter: {
-    fontSize: 14,
-    color: "#555",
-    marginVertical: 10,
+    fontSize: 16,
+    color: "#000000",
+    marginVertical: 20,
     fontFamily: "SofiaSans_400Regular",
   },
   buttons: {
@@ -174,13 +180,12 @@ const styles = StyleSheet.create({
   primaryButton: {
     backgroundColor: "#EB2F96",
     paddingVertical: 12,
-    borderRadius: 8,
+    borderRadius: 4,
     alignItems: "center",
     fontFamily: "SofiaSans_400Regular",
   },
   primaryText: {
     color: "#fff",
-    fontWeight: "bold",
     fontSize: 16,
     fontFamily: "SofiaSans_400Regular",
   },
@@ -189,7 +194,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "#ccc",
     paddingVertical: 12,
-    borderRadius: 8,
+    borderRadius: 4,
     alignItems: "center",
     fontFamily: "SofiaSans_400Regular",
   },

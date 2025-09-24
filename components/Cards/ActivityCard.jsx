@@ -1,10 +1,18 @@
 import { View, Text, StyleSheet, Pressable } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 
 export default function SportCard({ title, description, onPress }) {
   return (
     <View style={styles.card}>
-      <Text style={styles.title}>{title}</Text>
-      <Text style={styles.description}>{description}</Text>
+      <View style={{ paddingRight: 24 }}>
+        <Text style={styles.title}>{title}</Text>
+        <Text style={styles.description}>{description}</Text>
+      </View>
+
+      <Pressable onPress={onPress} style={styles.arrow} hitSlop={10}>
+        <Ionicons name="chevron-forward" size={20} color="#EB2F96" />
+      </Pressable>
+
       <Pressable onPress={onPress} style={styles.button}>
         <Text style={styles.buttonText}>Ver detalhes</Text>
       </Pressable>
@@ -15,31 +23,42 @@ export default function SportCard({ title, description, onPress }) {
 const styles = StyleSheet.create({
   card: {
     backgroundColor: "#f9f9f9ff",
-    paddingHorizontal: 16,
+    paddingHorizontal: 24,
     paddingVertical: 24,
     borderRadius: 12,
     marginBottom: 16,
+    position: "relative",
+    fontFamily: "SofiaSans_400Regular",
   },
   title: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "bold",
     marginBottom: 6,
+    fontFamily: "SofiaSans_400Regular",
   },
   description: {
     fontSize: 14,
-    color: "#555",
+    color: "#7B7B7B",
     marginBottom: 10,
+    paddingRight: 20,
+    fontFamily: "SofiaSans_400Regular",
+  },
+  arrow: {
+    position: "absolute",
+    right: 16,
+    top: "70%",
+    transform: [{ translateY: -10 }],
   },
   button: {
     borderWidth: 1,
-    borderColor: "#ff007f",
-    borderRadius: 8,
+    borderColor: "#EB2F96",
+    borderRadius: 4,
     paddingVertical: 6,
     paddingHorizontal: 12,
     alignSelf: "flex-start",
   },
   buttonText: {
-    color: "#ff007f",
-    fontWeight: "600",
+    color: "#EB2F96",
+    fontWeight: "400",
   },
 });

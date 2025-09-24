@@ -102,7 +102,7 @@ export default function CreateAccountScreen() {
 
       <View style={styles.buttons}>
         <Pressable style={styles.primaryButton} onPress={handleCreateAccount}>
-          <Text style={styles.primaryText}>Criar Conta</Text>
+          <Text style={styles.primaryText}>Criar conta</Text>
         </Pressable>
         <Pressable
           style={styles.secondaryButton}
@@ -118,17 +118,19 @@ export default function CreateAccountScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F2F2F2",
+    backgroundColor: "#fbfbfbff",
     paddingHorizontal: 24,
     paddingTop: 60,
     paddingBottom: 40,
   },
   header: {
     marginBottom: 32,
+    fontFamily: "SofiaSans_400Regular",
   },
   headerTitle: {
-    fontSize: 30,
-    fontWeight: "bold",
+    fontSize: 32,
+    fontFamily: "SofiaSans_400Regular",
+    fontWeight: "800",
     color: "#515151",
     marginBottom: 24,
   },
@@ -136,13 +138,15 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "#7B7B7B",
     lineHeight: 22,
+    fontFamily: "SofiaSans_400Regular",
   },
   headerSubtitleBody: {
-    fontSize: 16,
+    fontSize: 18,
     color: "#7B7B7B",
     lineHeight: 22,
     marginBottom: 24,
     marginTop: 24,
+    fontFamily: "SofiaSans_400Regular",
   },
   headerSubtitleBold: {
     fontWeight: "bold",
@@ -163,9 +167,9 @@ const styles = StyleSheet.create({
   },
 
   googleButtonText: {
-    fontSize: 16,
+    fontSize: 17,
     color: "#1890FF",
-    fontWeight: "bold",
+    fontWeight: "700",
     marginLeft: 20,
   },
   googleIconImage: {
@@ -183,8 +187,9 @@ const styles = StyleSheet.create({
   },
   dividerText: {
     marginHorizontal: 16,
-    fontSize: 14,
-    color: "#666666",
+    fontSize: 16,
+    color: "#000000",
+    fontWeight: "500",
   },
   form: {
     marginBottom: 86,
@@ -201,10 +206,11 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: "#000000",
     marginBottom: 8,
+    fontFamily: "Roboto_400Regular",
   },
   input: {
     backgroundColor: "#FFFFFF",
-    borderRadius: 8,
+    borderRadius: 4,
     paddingHorizontal: 16,
     paddingVertical: 12,
     fontSize: 16,
@@ -223,12 +229,12 @@ const styles = StyleSheet.create({
   primaryButton: {
     backgroundColor: "#EB2F96",
     paddingVertical: 12,
-    borderRadius: 8,
+    borderRadius: 4,
     alignItems: "center",
   },
   primaryText: {
     color: "#fff",
-    fontWeight: "bold",
+    fontFamily: "Roboto_400Regular",
     fontSize: 16,
   },
   secondaryButton: {
@@ -236,18 +242,19 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "#ccc",
     paddingVertical: 12,
-    borderRadius: 8,
+    borderRadius: 4,
     alignItems: "center",
   },
   secondaryText: {
     color: "#000",
     fontSize: 16,
+    fontFamily: "Roboto_400Regular",
   },
   inputContainer: {
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: "#FFFFFF",
-    borderRadius: 8,
+    borderRadius: 4,
     paddingHorizontal: 16,
     paddingVertical: 2,
     fontSize: 16,

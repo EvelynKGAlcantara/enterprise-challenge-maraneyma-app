@@ -44,10 +44,11 @@ const styles = StyleSheet.create({
   header: {
     textAlign: "center",
     marginTop: 50,
-    fontSize: 30,
-    fontWeight: "bold",
+    fontSize: 32,
+    fontWeight: "900",
     color: "#515151",
     marginBottom: 24,
+    fontFamily: "SofiaSans_400Regular",
   },
   tabs: {
     flexDirection: "row",
@@ -69,11 +70,11 @@ const styles = StyleSheet.create({
   },
   activeTab: {
     borderBottomWidth: 1,
-    borderBottomColor: "#ff007f",
+    borderBottomColor: "#EB2F96",
     backgroundColor: "#ffffff",
   },
   activeText: {
-    color: "#ff007f",
-    fontWeight: "bold",
+    color: "#EB2F96",
+    fontWeight: "500",
   },
 });

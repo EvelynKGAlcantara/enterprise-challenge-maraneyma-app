@@ -10,14 +10,17 @@ export default function TabLayout() {
         tabBarShowLabel: false,
         tabBarStyle: {
           backgroundColor: "#F7F9F8",
-          borderTopWidth: 1,
-          borderTopColor: "#ddd",
+          borderTopWidth: 0,
           height: 80,
           justifyContent: "center",
           alignItems: "center",
           paddingTop: 10,
+          borderTopLeftRadius: 20,
+          borderTopRightRadius: 20,
+          position: "absolute",
+          overflow: "hidden",
         },
-        tabBarActiveTintColor: "#EB2F96",
+        tabBarActiveTintColor: "#000",
         tabBarInactiveTintColor: "#7B7B7B",
       }}
     >
@@ -28,18 +31,29 @@ export default function TabLayout() {
           tabBarIcon: ({ color, size, focused }) => (
             <View
               style={{
-                flex: 1,
                 alignItems: "center",
-                width: 80,
+                width: 90,
+                borderRightWidth: 1,
+                borderRightColor: "#fff",
               }}
             >
+              {focused && (
+                <View
+                  style={{
+                    height: 3,
+                    width: "60%",
+                    backgroundColor: "#000",
+                    borderRadius: 2,
+                    marginBottom: 6,
+                  }}
+                />
+              )}
               <Text
-                numberOfLines={1}
                 style={{
                   fontSize: 12,
                   color,
                   fontWeight: focused ? "bold" : "normal",
-                  fontFamily: "SofiaSans",
+                  fontFamily: "SofiaSans_400Regular",
                   marginBottom: 2,
                   height: 16,
                   textAlign: "center",
@@ -47,7 +61,11 @@ export default function TabLayout() {
               >
                 Home
               </Text>
-              <Ionicons name="home-outline" size={size} color={color} />
+              <Ionicons
+                name={focused ? "home" : "home-outline"}
+                size={size}
+                color={color}
+              />
             </View>
           ),
         }}
@@ -57,14 +75,31 @@ export default function TabLayout() {
         options={{
           title: "Tutoriais",
           tabBarIcon: ({ color, size, focused }) => (
-            <View style={{ alignItems: "center", width: 80 }}>
+            <View
+              style={{
+                alignItems: "center",
+                width: 90,
+                borderRightWidth: 1,
+                borderRightColor: "#fff",
+              }}
+            >
+              {focused && (
+                <View
+                  style={{
+                    height: 3,
+                    width: "60%",
+                    backgroundColor: "#000",
+                    borderRadius: 2,
+                    marginBottom: 6,
+                  }}
+                />
+              )}
               <Text
-                numberOfLines={1}
                 style={{
                   fontSize: 12,
                   color,
                   fontWeight: focused ? "bold" : "normal",
-                  fontFamily: "SofiaSans",
+                  fontFamily: "SofiaSans_400Regular",
                   marginBottom: 2,
                   height: 16,
                   textAlign: "center",
@@ -72,7 +107,11 @@ export default function TabLayout() {
               >
                 Tutoriais
               </Text>
-              <Ionicons name="book-outline" size={size} color={color} />
+              <Ionicons
+                name={focused ? "book" : "book-outline"}
+                size={size}
+                color={color}
+              />
             </View>
           ),
         }}
@@ -82,7 +121,25 @@ export default function TabLayout() {
         options={{
           title: "Campeonato",
           tabBarIcon: ({ color, size, focused }) => (
-            <View style={{ alignItems: "center", width: 80 }}>
+            <View
+              style={{
+                alignItems: "center",
+                width: 90,
+                borderRightWidth: 1,
+                borderRightColor: "#fff",
+              }}
+            >
+              {focused && (
+                <View
+                  style={{
+                    height: 3,
+                    width: "60%",
+                    backgroundColor: "#000",
+                    borderRadius: 2,
+                    marginBottom: 6,
+                  }}
+                />
+              )}
               <Text
                 numberOfLines={1}
                 ellipsizeMode="tail"
@@ -90,7 +147,7 @@ export default function TabLayout() {
                   fontSize: 12,
                   color,
                   fontWeight: focused ? "bold" : "normal",
-                  fontFamily: "SofiaSans",
+                  fontFamily: "SofiaSans_400Regular",
                   marginBottom: 2,
                   height: 16,
                   textAlign: "center",
@@ -98,7 +155,11 @@ export default function TabLayout() {
               >
                 Campeonato
               </Text>
-              <Ionicons name="trophy-outline" size={size} color={color} />
+              <Ionicons
+                name={focused ? "trophy" : "trophy-outline"}
+                size={size}
+                color={color}
+              />
             </View>
           ),
         }}
@@ -108,14 +169,24 @@ export default function TabLayout() {
         options={{
           title: "Ranking",
           tabBarIcon: ({ color, size, focused }) => (
-            <View style={{ alignItems: "center", width: 80 }}>
+            <View style={{ alignItems: "center", width: 90 }}>
+              {focused && (
+                <View
+                  style={{
+                    height: 3,
+                    width: "60%",
+                    backgroundColor: "#000",
+                    borderRadius: 2,
+                    marginBottom: 6,
+                  }}
+                />
+              )}
               <Text
-                numberOfLines={1}
                 style={{
                   fontSize: 12,
                   color,
                   fontWeight: focused ? "bold" : "normal",
-                  fontFamily: "SofiaSans",
+                  fontFamily: "SofiaSans_400Regular",
                   marginBottom: 2,
                   height: 16,
                   textAlign: "center",
@@ -123,7 +194,11 @@ export default function TabLayout() {
               >
                 Ranking
               </Text>
-              <Ionicons name="podium-outline" size={size} color={color} />
+              <Ionicons
+                name={focused ? "podium" : "podium-outline"}
+                size={size}
+                color={color}
+              />
             </View>
           ),
         }}

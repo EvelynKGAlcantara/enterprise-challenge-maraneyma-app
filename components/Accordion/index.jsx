@@ -35,7 +35,7 @@ export default function Accordion({ title, content }) {
 
   const rotation = rotateAnim.interpolate({
     inputRange: [0, 1],
-    outputRange: ["0deg", "90deg"], // gira 90° pra baixo
+    outputRange: ["0deg", "90deg"],
   });
 
   return (
@@ -58,14 +58,14 @@ export default function Accordion({ title, content }) {
 const styles = StyleSheet.create({
   container: {
     marginBottom: 10,
-    borderRadius: 8,
+    borderRadius: 4,
     borderWidth: 1,
     borderColor: "#ddd",
     backgroundColor: "#fff",
     overflow: "hidden",
   },
   header: {
-    flexDirection: "row", // seta + texto lado a lado
+    flexDirection: "row",
     alignItems: "center",
     padding: 14,
     gap: 10,
@@ -73,8 +73,8 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 16,
-    fontWeight: "bold",
-    color: "#00000085",
+    fontWeight: "500",
+    color: "#000000",
     fontFamily: "Roboto",
   },
   content: {
@@ -83,8 +83,9 @@ const styles = StyleSheet.create({
     borderTopColor: "#eee",
   },
   contentText: {
-    fontSize: 14,
-    color: "#555",
+    fontSize: 16,
+    color: "#7B7B7B",
     lineHeight: 20,
+    fontFamily: "SofiaSans_400Regular",
   },
 });

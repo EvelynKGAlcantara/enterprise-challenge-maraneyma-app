@@ -16,28 +16,42 @@ const mockData = [
     id: 1,
     title: "Como planejar a atividade?",
     content:
-      "1. Escolha do local: Opte por um espaço amplo e seguro, com o chão livre de obstáculos...\n\n2. Preparo do material: Você precisará de uma corda resistente...\n\n3. Demarcação: Trace uma linha no chão que servirá como linha de vitória.",
+      "1. Escolha do local: Opte por um espaço amplo e seguro, com o chão livre de obstáculos. Um gramado ou uma quadra são ideais\n\n2. Preparo do material: Você precisará de uma corda resistente e longa o suficiente para todos os participantes. Se possível, marque o centro da corda com um nó ou fita colorida.\n\n3. Demarcação: Trace uma linha no chão que servirá como linha de vitória para cada equipe. Marque também um ponto central na corda, alinhada com a linha central do campo.",
   },
   {
     id: 2,
     title: "Regras a serem seguidas",
     content:
-      "Duas equipes se posicionam em lados opostos...\n\nCada equipe segura a corda, com os participantes enfileirados...\n\nAo sinal combinado, todos começam a puxar...",
+      "Duas equipes se posicionam em lados opostos da linha central.\n\nCada equipe segura a corda, com os participantes enfileirados um atrás do outro.\n\nAo sinal combinado (um grito, um apito), as equipes começam a puxar a corda em direção ao seu lado.\n\nA equipe que conseguir puxar a corda de forma que a marca central ultrapasse a linha de vitória do seu lado vence.\n\nÉ proibido soltar a corda com as mãos, escorregar propositalmente ou usar o corpo para travar a corda.",
   },
   {
     id: 3,
     title: "Quantidade de participantes",
-    content: "O ideal é ter de 6 a 10 participantes por equipe.",
+    content:
+      "Mínimo: 6 participantes (3 por equipe), para garantir um bom equilíbrio e desafio.\n\nMáximo: O limite é o tamanho da corda e o espaço disponível. O importante é que ambas as equipes tenham um número similar de participantes para tornar a disputa justa",
   },
   {
     id: 4,
     title: "Dicas para que as crianças não se machuquem",
-    content: "Evite solos escorregadios, use corda de espessura adequada...",
+    content:
+      "Corda Adequada: Use uma corda grossa e firme, que não machuque as mãos. Evite cordas muito finas ou ásperas.\n\nPosição Correta: Oriente os alunos a se agacharem levemente, mantendo as pernas afastadas para ter mais firmeza. A força deve vir das pernas e do corpo, não apenas dos braços.\n\nSem Correr para Trás: Oriente os alunos a não darem passos para trás de forma descontrolada, pois isso pode causar quedas. O movimento deve ser de puxar, não de recuar.\n\nSupervisão Constante: Fique atento durante toda a atividade, orientando e intervindo se necessário.",
+  },
+  {
+    id: 5,
+    title: "Tempo da atividade",
+    content:
+      "Cada partida de cabo de guerra geralmente dura entre 1 a 3 minutos. O tempo pode variar dependendo da força das equipes e da estratégia utilizada. É recomendável fazer pausas entre as partidas para que os alunos descansem e se hidratem.",
+  },
+  {
+    id: 6,
+    title: "Improvisação: É Possível?",
+    content:
+      "Corda: Se não houver uma corda própria, procure por cintos de segurança de carros antigos, correntes grossas (verifique se não há pontas soltas), ou até mesmo faça uma corda com vários tecidos grossos amarrados e trançados com muita firmeza. O importante é que seja resistente o suficiente para a força das crianças.\n\nLinhas de Demarcação: Em vez de riscar o chão, use pedras, galhos, ou até mesmo roupas de cores diferentes de cada equipe para marcar os limites.",
   },
 ];
 
 export default function DetailsScreen() {
-  const [sport, setSport] = useState("Cabo de Guerra");
+  const [sport, setSport] = useState("Cabo de guerra");
   const handleShare = () => {
     router.push("../app/(tabs)/homeScreen.jsx");
   };
@@ -88,18 +102,19 @@ export default function DetailsScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F2F2F2",
+    backgroundColor: "#fbfbfbff",
     paddingHorizontal: 24,
     paddingTop: 60,
     paddingBottom: 40,
   },
 
   headerTitle: {
-    fontSize: 30,
-    fontWeight: "bold",
+    marginTop: 24,
+    fontSize: 32,
+    fontWeight: "900",
     color: "#515151",
     marginBottom: 24,
-    marginTop: 24,
+    fontFamily: "SofiaSans_400Regular",
   },
   image: {
     marginTop: 24,
@@ -108,7 +123,7 @@ const styles = StyleSheet.create({
   tag: {
     backgroundColor: "#FFFB8F",
     width: 150,
-    borderRadius: 20,
+    borderRadius: 4,
     textAlign: "center",
     padding: 5,
   },
@@ -116,20 +131,22 @@ const styles = StyleSheet.create({
     marginTop: 24,
     fontSize: 16,
     color: "#7B7B7B",
+    fontFamily: "SofiaSans_400Regular",
   },
   bodyTextBold: {
     fontWeight: "bold",
     color: "#000000",
+    fontFamily: "SofiaSans_400Regular",
   },
   primaryButton: {
     backgroundColor: "#EB2F96",
     paddingVertical: 12,
-    borderRadius: 8,
+    borderRadius: 4,
     alignItems: "center",
   },
   primaryText: {
     color: "#fff",
-    fontWeight: "bold",
+
     fontSize: 16,
   },
   buttons: {

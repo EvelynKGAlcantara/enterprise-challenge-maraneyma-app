@@ -22,7 +22,6 @@ export default function Home() {
         </View>
       </View>
 
-      {/* Conteúdo principal */}
       <View style={styles.container}>
         <Image
           source={require("../../assets/images/construcao.png")}
@@ -83,9 +82,10 @@ const styles = StyleSheet.create({
   },
   statusLabel: {
     fontSize: 13,
-    color: "#333",
+    color: "#000000",
+    fontFamily: "SofiaSans_400Regular",
 
-    fontWeight: "bold",
+    fontWeight: "800",
   },
   statusIndicator: {
     flexDirection: "row",
@@ -101,7 +101,8 @@ const styles = StyleSheet.create({
   statusText: {
     fontSize: 13,
     color: "#333",
-    fontWeight: "500",
+
+    fontFamily: "SofiaSans_400Regular",
   },
   container: {
     flex: 1,

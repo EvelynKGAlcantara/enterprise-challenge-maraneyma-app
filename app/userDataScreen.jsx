@@ -90,13 +90,14 @@ export default function UserDataScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F2F2F2",
+    backgroundColor: "#fbfbfbff",
     paddingHorizontal: 24,
     paddingTop: 60,
     paddingBottom: 40,
   },
   header: {
     marginBottom: 32,
+    fontFamily: "SofiaSans_400Regular",
   },
   headerTitle: {
     fontSize: 30,
@@ -105,9 +106,10 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   headerSubtitle: {
-    fontSize: 16,
+    fontSize: 18,
     color: "#7B7B7B",
     lineHeight: 22,
+    fontFamily: "SofiaSans_400Regular",
   },
   googleButton: {
     flexDirection: "row",
@@ -174,7 +176,7 @@ const styles = StyleSheet.create({
   },
   input: {
     backgroundColor: "#FFFFFF",
-    borderRadius: 8,
+    borderRadius: 4,
     paddingHorizontal: 16,
     paddingVertical: 12,
     fontSize: 16,
@@ -183,7 +185,7 @@ const styles = StyleSheet.create({
   },
   inputYear: {
     backgroundColor: "#FFFFFF",
-    borderRadius: 8,
+    borderRadius: 4,
     paddingHorizontal: 16,
     paddingVertical: 12,
     width: 150,
@@ -272,17 +274,17 @@ const styles = StyleSheet.create({
 
   buttons: {
     gap: 10,
-    marginTop: 140,
+    marginTop: 150,
   },
   primaryButton: {
     backgroundColor: "#EB2F96",
     paddingVertical: 12,
-    borderRadius: 8,
+    borderRadius: 4,
     alignItems: "center",
   },
   primaryText: {
     color: "#fff",
-    fontWeight: "bold",
+
     fontSize: 16,
   },
 });
