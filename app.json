@@ -29,9 +29,13 @@
       [
         "expo-splash-screen",
         {
+          "backgroundColor": "#232323",
           "image": "./assets/images/logo-maraneyma.png",
-          "imageWidth": 250,
-          "dark": {}
+          "dark": {
+            "image": "./assets/images/logo-maraneyma.png",
+            "backgroundColor": "#000000"
+          },
+          "imageWidth": 200
         }
       ],
       "expo-font"

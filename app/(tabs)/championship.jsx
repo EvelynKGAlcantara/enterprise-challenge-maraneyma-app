@@ -1,14 +1,42 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 
 export default function Championship() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>🏆 Campeonato</Text>
+      <View style={styles.container}>
+        <Image
+          source={require("../../assets/images/construcao.png")}
+          style={styles.image}
+        />
+        <Text style={styles.mainText}>Em construção</Text>
+        <Text style={styles.subText}>Campeonato</Text>
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: "center", alignItems: "center" },
-  text: { fontSize: 20, fontWeight: "bold" },
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    paddingHorizontal: 20,
+  },
+  mainText: {
+    fontSize: 24,
+    textAlign: "center",
+    color: "#666",
+    fontWeight: "500",
+    marginTop: 20,
+  },
+  subText: {
+    fontSize: 16,
+    textAlign: "center",
+    color: "#999",
+    marginTop: 8,
+  },
+  image: {
+    height: "40%",
+    resizeMode: "contain",
+  },
 });
