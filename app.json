@@ -3,7 +3,6 @@
     "name": "Maraneyma",
     "slug": "Maraneyma",
     "version": "1.0.0",
-
     "orientation": "portrait",
     "icon": "./assets/images/logo-maraneyma.png",
     "scheme": "maraneyma",
@@ -32,10 +31,10 @@
         {
           "image": "./assets/images/logo-maraneyma.png",
           "imageWidth": 250,
-
           "dark": {}
         }
-      ]
+      ],
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true,

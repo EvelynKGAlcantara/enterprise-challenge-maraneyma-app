@@ -49,23 +49,28 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 30,
     color: "#000000",
+    fontFamily: "SofiaSans_400Regular",
   },
   titleBold: {
     fontWeight: "bold",
     fontSize: 30,
+    fontFamily: "SofiaSans_400Regular",
   },
   text: {
     textAlign: "center",
     color: "#000000",
     fontSize: 20,
+    fontFamily: "SofiaSans_400Regular",
   },
   textBoldPurple: {
     fontWeight: "bold",
     color: "#EB2F96",
+    fontFamily: "SofiaSans_400Regular",
   },
   textBoldBlack: {
     fontWeight: "bold",
     color: "#000000",
+    fontFamily: "SofiaSans_400Regular",
   },
   image: {},
   tabs: {

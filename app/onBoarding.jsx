@@ -154,14 +154,17 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: "center",
     color: "#000",
+    fontFamily: "SofiaSans_400Regular",
   },
   boldText: {
     fontWeight: "bold",
+    fontFamily: "SofiaSans_400Regular",
   },
   counter: {
     fontSize: 14,
     color: "#555",
     marginVertical: 10,
+    fontFamily: "SofiaSans_400Regular",
   },
   buttons: {
     gap: 10,
@@ -173,11 +176,13 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     borderRadius: 8,
     alignItems: "center",
+    fontFamily: "SofiaSans_400Regular",
   },
   primaryText: {
     color: "#fff",
     fontWeight: "bold",
     fontSize: 16,
+    fontFamily: "SofiaSans_400Regular",
   },
   secondaryButton: {
     backgroundColor: "#fff",
@@ -186,9 +191,11 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     borderRadius: 8,
     alignItems: "center",
+    fontFamily: "SofiaSans_400Regular",
   },
   secondaryText: {
     color: "#000",
     fontSize: 16,
+    fontFamily: "SofiaSans_400Regular",
   },
 });
