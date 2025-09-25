@@ -1,23 +1,23 @@
-# Maraneyma App
+# 🌟 Maraneyma App
 
 Maraneyma significa "saúde" em Tupi-Guarani. O aplicativo tem como objetivo promover práticas físicas acessíveis, gamificadas e adaptadas à realidade brasileira, incentivando alunos e professores a superarem o sedentarismo em ambientes com baixa infraestrutura.
 
 Em vez de focar exclusivamente em esportes tradicionais que demandam maior investimento em equipamentos ou espaços, o Maraneyma App oferece um repertório de atividades simples, como pular corda, corrida, amarelinha e outras brincadeiras escolares que podem ser trabalhadas de forma inclusiva
 
-## Arquitetura e Tecnologias
+## ⚙️ Arquitetura e Tecnologias
 
 - Este é um projeto [Expo](https://expo.dev) criado com [`npx create-expo-app@latest`](https://docs.expo.dev/get-started/create-a-project/).
 - Linguagem: JavaScript (React Native)
 - Dependências: gerenciadas via npm
 
-## Pré-requisitos
+## 🏁 Pré-requisitos
 
 Para execução local, é necessário:
 
 - Node.js instalado
 - Expo Go (para rodar no celular) ou emuladores (Android/iOS) configurados
 
-## Instalação e Execução
+## 🚀 Instalação e Execução
 
 1. Clonar o repositório
 
@@ -47,6 +47,6 @@ Para execução local, é necessário:
 
 Este projeto utiliza roteamento baseado em arquivos (https://docs.expo.dev/router/introduction).
 
-## Link do Protótipo do Projeto
+## 💡 Link do Protótipo do Projeto
 
 https://www.figma.com/design/TVKCBYCgxNOtr1PmPMVKvc/Maraneyma-Desenvolvimento?node-id=0-1&t=tNEvRkdO2H6PnGkN-1
