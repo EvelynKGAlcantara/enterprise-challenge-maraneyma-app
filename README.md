@@ -21,10 +21,10 @@ Para execução local, é necessário:
 
 1. Clonar o repositório
 
-```bash
-  git clone https://github.com/EvelynKGAlcantara/enterprise-challenge-maraneyma-app.git
-  cd Maraneyma
-```
+   ```bash
+   git clone https://github.com/EvelynKGAlcantara/enterprise-challenge-maraneyma-app.git
+   cd Maraneyma
+   ```
 
 2. Instale as dependências
 
