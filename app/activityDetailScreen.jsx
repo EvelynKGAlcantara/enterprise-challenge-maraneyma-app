@@ -109,16 +109,16 @@ const styles = StyleSheet.create({
   },
 
   headerTitle: {
-    marginTop: 24,
+    marginTop: 18,
     fontSize: 32,
-    fontWeight: "900",
     color: "#515151",
-    marginBottom: 24,
-    fontFamily: "SofiaSans_400Regular",
+    marginBottom: 18,
+    fontFamily: "SofiaSans_800ExtraBold",
   },
   image: {
-    marginTop: 24,
-    alignSelf: "center",
+    width: 330,
+    height: 200,
+    resizeMode: "contain",
   },
   tag: {
     backgroundColor: "#FFFB8F",
@@ -128,15 +128,13 @@ const styles = StyleSheet.create({
     padding: 5,
   },
   bodyText: {
-    marginTop: 24,
     fontSize: 16,
     color: "#7B7B7B",
     fontFamily: "SofiaSans_400Regular",
   },
   bodyTextBold: {
-    fontWeight: "bold",
     color: "#000000",
-    fontFamily: "SofiaSans_400Regular",
+    fontFamily: "SofiaSans_800ExtraBold",
   },
   primaryButton: {
     backgroundColor: "#EB2F96",

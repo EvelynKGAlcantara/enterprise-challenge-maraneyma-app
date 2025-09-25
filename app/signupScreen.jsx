@@ -129,11 +129,12 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     fontSize: 32,
-    fontFamily: "SofiaSans_400Regular",
-    fontWeight: "800",
     color: "#515151",
+
+    fontFamily: "SofiaSans_800ExtraBold",
     marginBottom: 24,
   },
+
   headerSubtitle: {
     fontSize: 16,
     color: "#7B7B7B",

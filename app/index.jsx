@@ -94,16 +94,16 @@ const styles = StyleSheet.create({
   },
 
   logo: {
+    height: 100,
     resizeMode: "contain",
-    marginBottom: 70,
     marginTop: 110,
+    marginBottom: 70,
   },
   slide: {
     alignItems: "center",
   },
   Image: {
     resizeMode: "contain",
-
     width: 400,
     height: 270,
   },

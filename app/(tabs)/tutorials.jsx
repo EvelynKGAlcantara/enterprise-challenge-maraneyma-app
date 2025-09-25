@@ -45,11 +45,11 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginTop: 50,
     fontSize: 32,
-    fontWeight: "900",
     color: "#515151",
     marginBottom: 24,
-    fontFamily: "SofiaSans_400Regular",
+    fontFamily: "SofiaSans_800ExtraBold",
   },
+
   tabs: {
     flexDirection: "row",
     justifyContent: "center",

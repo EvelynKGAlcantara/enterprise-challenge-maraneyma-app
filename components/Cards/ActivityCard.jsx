@@ -32,9 +32,9 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 18,
-    fontWeight: "bold",
+
     marginBottom: 6,
-    fontFamily: "SofiaSans_400Regular",
+    fontFamily: "SofiaSans_800ExtraBold",
   },
   description: {
     fontSize: 14,

@@ -163,8 +163,7 @@ const styles = StyleSheet.create({
     fontFamily: "SofiaSans_400Regular",
   },
   boldText: {
-    fontWeight: "bold",
-    fontFamily: "SofiaSans_400Regular",
+    fontFamily: "SofiaSans_800ExtraBold",
   },
   counter: {
     fontSize: 16,

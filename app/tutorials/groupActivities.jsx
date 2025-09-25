@@ -67,11 +67,10 @@ const styles = StyleSheet.create({
   container: { flex: 1, padding: 16 },
   title: {
     fontSize: 22,
-    fontWeight: "bold",
     textAlign: "center",
     marginBottom: 12,
     color: "#EB2F96",
-    fontFamily: "SofiaSans_400Regular",
+    fontFamily: "SofiaSans_800ExtraBold",
   },
   image: {
     width: "100%",

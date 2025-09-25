@@ -197,10 +197,9 @@ const styles = StyleSheet.create({
   },
   successTitle: {
     fontSize: 24,
-    fontWeight: "bold",
     color: "#626262",
     textAlign: "center",
-    fontFamily: "SofiaSans_400Regular",
+    fontFamily: "SofiaSans_800ExtraBold",
   },
   advanceButton: {
     backgroundColor: "#EB2F96",
@@ -215,8 +214,8 @@ const styles = StyleSheet.create({
   },
   buttons: {
     gap: 10,
-    marginTop: 140,
-    marginBottom: 20,
+    marginTop: 10,
+    marginBottom: 10,
   },
   primaryButton: {
     backgroundColor: "#EB2F96",

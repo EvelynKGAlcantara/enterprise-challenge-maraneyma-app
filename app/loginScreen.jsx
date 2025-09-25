@@ -112,10 +112,12 @@ const styles = StyleSheet.create({
     marginBottom: 32,
     fontFamily: "SofiaSans_400Regular",
   },
+
   headerTitle: {
-    fontSize: 30,
-    fontWeight: "bold",
+    fontSize: 32,
     color: "#515151",
+
+    fontFamily: "SofiaSans_800ExtraBold",
     marginBottom: 24,
   },
   headerSubtitle: {
@@ -215,9 +217,10 @@ const styles = StyleSheet.create({
   },
   textPassword: {
     color: "#EB2F96",
-    fontWeight: "bold",
+
     fontSize: 18,
     textDecorationLine: "underline",
+    fontFamily: "SofiaSans_800ExtraBold",
   },
 
   wrapper: {

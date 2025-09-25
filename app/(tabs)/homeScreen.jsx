@@ -83,9 +83,7 @@ const styles = StyleSheet.create({
   statusLabel: {
     fontSize: 13,
     color: "#000000",
-    fontFamily: "SofiaSans_400Regular",
-
-    fontWeight: "800",
+    fontFamily: "SofiaSans_800ExtraBold",
   },
   statusIndicator: {
     flexDirection: "row",

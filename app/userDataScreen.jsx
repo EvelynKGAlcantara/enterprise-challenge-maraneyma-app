@@ -1,11 +1,4 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  TextInput,
-  TouchableOpacity,
-  Pressable,
-} from "react-native";
+import { StyleSheet, Text, View, TextInput, Pressable } from "react-native";
 import { useState } from "react";
 import { useRouter } from "expo-router";
 import { RadioButton } from "../components/Radio/Radio";
@@ -100,10 +93,10 @@ const styles = StyleSheet.create({
     fontFamily: "SofiaSans_400Regular",
   },
   headerTitle: {
-    fontSize: 30,
-    fontWeight: "bold",
+    fontSize: 32,
     color: "#515151",
     marginBottom: 16,
+    fontFamily: "SofiaSans_800ExtraBold",
   },
   headerSubtitle: {
     fontSize: 18,
@@ -274,7 +267,7 @@ const styles = StyleSheet.create({
 
   buttons: {
     gap: 10,
-    marginTop: 150,
+    marginTop: 160,
   },
   primaryButton: {
     backgroundColor: "#EB2F96",
