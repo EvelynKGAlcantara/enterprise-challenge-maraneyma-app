@@ -50,7 +50,3 @@ Este projeto utiliza roteamento baseado em arquivos (https://docs.expo.dev/route
 ## Link do Protótipo do Projeto
 
 https://www.figma.com/design/TVKCBYCgxNOtr1PmPMVKvc/Maraneyma-Desenvolvimento?node-id=0-1&t=tNEvRkdO2H6PnGkN-1
-
-## Prévia da Aplicação
-
-![Imagens]("../Maraneyma/assets/images/corrida.png")
