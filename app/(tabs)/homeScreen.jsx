@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   image: {
-    height: "40%",
+    height: "30%",
     resizeMode: "contain",
   },
 });

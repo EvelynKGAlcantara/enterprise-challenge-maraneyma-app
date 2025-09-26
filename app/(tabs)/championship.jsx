@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   image: {
-    height: "30%",
+    height: "25%",
     resizeMode: "contain",
   },
 });
