@@ -1,5 +1,4 @@
 import { Stack } from "expo-router";
-
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import {
@@ -39,13 +38,19 @@ export default function RootLayout() {
   }
 
   return (
-    <Stack screenOptions={{ headerShown: false }}>
+    <Stack
+      screenOptions={{
+        headerShown: false,
+        animation: "slide_from_right",
+        animationDuration: 150,
+        gestureEnabled: true,
+        gestureDirection: "horizontal",
+      }}
+    >
       <Stack.Screen name="index" />
       <Stack.Screen name="onBoarding" />
       <Stack.Screen name="signupScreen" />
       <Stack.Screen name="loginScreen" />
-
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
     </Stack>
   );
 }

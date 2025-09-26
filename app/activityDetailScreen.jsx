@@ -1,4 +1,3 @@
-// app/tutorials/GroupActivities.js
 import React, { useState } from "react";
 import {
   View,
@@ -11,6 +10,7 @@ import {
 import AntDesign from "@expo/vector-icons/AntDesign";
 import { router } from "expo-router";
 import Accordion from "../../Maraneyma/components/Accordion/index";
+
 const mockData = [
   {
     id: 1,
@@ -52,19 +52,22 @@ const mockData = [
 
 export default function DetailsScreen() {
   const [sport, setSport] = useState("Cabo de guerra");
+
   const handleShare = () => {
     router.push("../app/(tabs)/homeScreen.jsx");
   };
 
   return (
     <View style={styles.container}>
-      <ScrollView>
-        <AntDesign
-          name={"arrow-left"}
-          size={40}
-          color="#EB2F96"
-          onPress={router.back}
-        />
+      <AntDesign
+        name="arrow-left"
+        size={40}
+        color="#EB2F96"
+        onPress={router.back}
+        style={styles.backButton}
+      />
+
+      <ScrollView contentContainerStyle={styles.scrollContent}>
         <Text style={styles.headerTitle}>{sport}</Text>
         <Text style={styles.tag}>Atividade em Grupo</Text>
         <Image
@@ -78,7 +81,7 @@ export default function DetailsScreen() {
           motora. É uma ótima opção para atividades em grupo, promovendo a
           interação e a diversão entre os alunos.
         </Text>
-        {/* Accordion com mock */}
+
         <View style={{ marginTop: 24 }}>
           {mockData.map((item) => (
             <Accordion
@@ -102,24 +105,38 @@ export default function DetailsScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fbfbfbff",
+    backgroundColor: "#fbfbfb",
     paddingHorizontal: 24,
-    paddingTop: 60,
+    paddingTop: 40,
+  },
+
+  scrollContent: {
     paddingBottom: 40,
   },
 
+  backButton: {
+    width: "100%",
+    position: "absolute",
+    top: 40,
+    left: 16,
+    zIndex: 10,
+    backgroundColor: "#fbfbfb",
+  },
+
   headerTitle: {
-    marginTop: 18,
+    marginTop: 70,
     fontSize: 32,
     color: "#515151",
     marginBottom: 18,
     fontFamily: "SofiaSans_800ExtraBold",
   },
+
   image: {
     width: 330,
     height: 200,
     resizeMode: "contain",
   },
+
   tag: {
     backgroundColor: "#FFFB8F",
     width: 150,
@@ -127,26 +144,30 @@ const styles = StyleSheet.create({
     textAlign: "center",
     padding: 5,
   },
+
   bodyText: {
     fontSize: 16,
     color: "#7B7B7B",
     fontFamily: "SofiaSans_400Regular",
   },
+
   bodyTextBold: {
     color: "#000000",
     fontFamily: "SofiaSans_800ExtraBold",
   },
+
   primaryButton: {
     backgroundColor: "#EB2F96",
     paddingVertical: 12,
     borderRadius: 4,
     alignItems: "center",
   },
+
   primaryText: {
     color: "#fff",
-
     fontSize: 16,
   },
+
   buttons: {
     marginTop: 10,
     marginBottom: 16,

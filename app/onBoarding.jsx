@@ -10,6 +10,7 @@ import {
 } from "react-native";
 import { useRouter } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
+import AntDesign from "@expo/vector-icons/AntDesign";
 
 const { width } = Dimensions.get("window");
 
@@ -55,6 +56,7 @@ export default function OnBoarding() {
       image: require("../assets/images/peteca.png"),
     },
   ];
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const flatListRef = useRef(null);
   const router = useRouter();
@@ -78,6 +80,21 @@ export default function OnBoarding() {
       end={{ x: 0.5, y: 1 }}
       style={styles.container}
     >
+      {/* Botão de voltar só no slide 2 e 3 */}
+      {currentIndex > 0 && (
+        <AntDesign
+          name="arrow-left"
+          size={40}
+          color="#EB2F96"
+          onPress={() => {
+            if (currentIndex > 0) {
+              flatListRef.current.scrollToIndex({ index: currentIndex - 1 });
+            }
+          }}
+          style={styles.backButton}
+        />
+      )}
+
       <Image
         source={require("../assets/images/logo-maraneyma.png")}
         style={styles.logo}
@@ -201,5 +218,12 @@ const styles = StyleSheet.create({
     color: "#000",
     fontSize: 16,
     fontFamily: "SofiaSans_400Regular",
+  },
+  backButton: {
+    width: "100%",
+    position: "absolute",
+    top: 50,
+    left: 16,
+    zIndex: 10,
   },
 });

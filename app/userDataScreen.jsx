@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, TextInput, Pressable } from "react-native";
 import { useState } from "react";
 import { useRouter } from "expo-router";
 import { RadioButton } from "../components/Radio/Radio";
+import AntDesign from "@expo/vector-icons/AntDesign";
 
 export default function UserDataScreen() {
   const router = useRouter();
@@ -21,6 +22,13 @@ export default function UserDataScreen() {
 
   return (
     <View style={styles.container}>
+      <AntDesign
+        name="arrow-left"
+        size={40}
+        color="#EB2F96"
+        onPress={router.back}
+        style={styles.backButton}
+      />
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Seus dados</Text>
         <Text style={styles.headerSubtitle}>Complete seus dados</Text>
@@ -93,9 +101,10 @@ const styles = StyleSheet.create({
     fontFamily: "SofiaSans_400Regular",
   },
   headerTitle: {
+    marginTop: 45,
     fontSize: 32,
     color: "#515151",
-    marginBottom: 16,
+    marginBottom: 4,
     fontFamily: "SofiaSans_800ExtraBold",
   },
   headerSubtitle: {
@@ -220,7 +229,15 @@ const styles = StyleSheet.create({
     color: "#666666",
     textDecorationLine: "underline",
   },
-  // Success Screen Styles
+  backButton: {
+    width: "100%",
+    position: "absolute",
+    top: 50,
+    left: 16,
+    zIndex: 10,
+    backgroundColor: "#fbfbfb",
+  },
+
   successContainer: {
     flex: 1,
     justifyContent: "center",
@@ -267,7 +284,7 @@ const styles = StyleSheet.create({
 
   buttons: {
     gap: 10,
-    marginTop: 160,
+    marginTop: 123,
   },
   primaryButton: {
     backgroundColor: "#EB2F96",
