@@ -28,8 +28,15 @@ export default function Login() {
 
   return (
     <View style={styles.container}>
+      <AntDesign
+        name="arrow-left"
+        size={40}
+        color="#EB2F96"
+        onPress={router.back}
+        style={styles.backButton}
+      />
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>Acessar</Text>
+        <Text style={styles.headerTitle}>Acessar (login)</Text>
       </View>
 
       <Pressable style={styles.googleButton} onPress={handleGoogleLogin}>
@@ -114,11 +121,11 @@ const styles = StyleSheet.create({
   },
 
   headerTitle: {
+    marginTop: 16,
     fontSize: 32,
     color: "#515151",
-
+    marginBottom: 4,
     fontFamily: "SofiaSans_800ExtraBold",
-    marginBottom: 24,
   },
   headerSubtitle: {
     fontSize: 18,
@@ -170,7 +177,7 @@ const styles = StyleSheet.create({
     fontWeight: "500",
   },
   form: {
-    marginBottom: 166,
+    marginBottom: 140,
   },
   formTitle: {
     fontSize: 16,
@@ -212,12 +219,10 @@ const styles = StyleSheet.create({
   },
   primaryText: {
     color: "#fff",
-
     fontSize: 16,
   },
   textPassword: {
     color: "#EB2F96",
-
     fontSize: 18,
     textDecorationLine: "underline",
     fontFamily: "SofiaSans_800ExtraBold",
